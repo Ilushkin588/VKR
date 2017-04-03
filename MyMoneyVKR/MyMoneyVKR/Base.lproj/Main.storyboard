@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMoneyVKR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="147" translatesAutoresizingMaskIntoConstraints="NO" id="emf-X1-yhs">
+                                <rect key="frame" x="31" y="210" width="352" height="495"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="DNk-N4-Onv">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="231"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsQ-Qs-Z0K">
+                                                <rect key="frame" x="0.0" y="0.0" width="352" height="104"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="104" id="7dS-Ke-huZ"/>
+                                                    <constraint firstAttribute="width" constant="352" id="Mbf-Ap-4Ep"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Плюс"/>
+                                                <connections>
+                                                    <segue destination="wjg-VH-jLg" kind="show" id="XQ8-2h-DkJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh7-Ne-YO3">
+                                                <rect key="frame" x="0.0" y="127" width="352" height="104"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="104" id="5Tg-Uw-QCN"/>
+                                                    <constraint firstAttribute="width" constant="352" id="8Kp-cc-53a"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Минус"/>
+                                                <connections>
+                                                    <segue destination="9Hx-oW-uSN" kind="show" id="NKg-GJ-ypN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBA-uZ-Rf5">
+                                        <rect key="frame" x="0.0" y="378" width="352" height="117"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="352" id="1Sh-sf-oH4"/>
+                                            <constraint firstAttribute="height" constant="117" id="OUh-Iw-PHz"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Говорите"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="emf-X1-yhs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="89.5" id="9nW-V2-Cb8"/>
+                            <constraint firstItem="emf-X1-yhs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B3G-X9-Ln0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.23188405797103" y="138.58695652173915"/>
+        </scene>
+        <!--minusMoneyController-->
+        <scene sceneID="2Jg-hN-2rn">
+            <objects>
+                <viewController title="minusMoneyController" id="9Hx-oW-uSN" customClass="MinusMoneyViewController" customModule="MyMoneyVKR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9nQ-Qd-a0l"/>
+                        <viewControllerLayoutGuide type="bottom" id="257-Gw-85f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xi9-Z0-pl4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Oto-4g-cgZ">
+                                <rect key="frame" x="20" y="86" width="374" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Наличные"/>
+                                    <segment title="Карта"/>
+                                </segments>
+                                <color key="tintColor" red="0.73725490196078436" green="0.18431372549019609" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите сумму" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itU-3C-sQ3">
+                                <rect key="frame" x="108" y="168" width="199" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A19-eE-vx6">
+                                <rect key="frame" x="20" y="652" width="374" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                <state key="normal" title="Button" image="Подробнее-1"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOU-fa-MTO">
+                                <rect key="frame" x="20" y="28" width="194" height="25"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWA-nD-B6W">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="A8n-iO-exZ"/>
+                                            <constraint firstAttribute="width" constant="25" id="kQO-hg-eYT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Button" image="Закрыть Красный"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="Z05-wj-qsZ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новый расход" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mO-jH-JcH">
+                                        <rect key="frame" x="25" y="0.0" width="169" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="6cz-YA-gqS"/>
+                                            <constraint firstAttribute="width" constant="169" id="ZWb-2P-R7c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
+                                        <color key="textColor" red="0.73725490196078436" green="0.18431372549019609" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hOU-fa-MTO" firstAttribute="centerY" secondItem="xi9-Z0-pl4" secondAttribute="centerY" constant="-327.5" id="BN9-3D-RHd"/>
+                            <constraint firstItem="hOU-fa-MTO" firstAttribute="centerX" secondItem="xi9-Z0-pl4" secondAttribute="centerX" constant="-90" id="bPg-n2-t6S"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gB9-JR-KqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905.79710144927549" y="513.58695652173913"/>
+        </scene>
+        <!--plusMoneyController-->
+        <scene sceneID="jWs-Da-kBB">
+            <objects>
+                <viewController title="plusMoneyController" id="wjg-VH-jLg" customClass="PlusMoneyViewController" customModule="MyMoneyVKR" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aab-wX-tMh"/>
+                        <viewControllerLayoutGuide type="bottom" id="IPR-3F-ECN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yNO-WF-i6S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pHA-FD-WkG">
+                                <rect key="frame" x="20" y="99" width="374" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title=" Наличные"/>
+                                    <segment title="Карта"/>
+                                </segments>
+                                <color key="tintColor" red="0.49803921568627452" green="0.64313725490196072" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBK-sp-Oud">
+                                <rect key="frame" x="20" y="28" width="185" height="25"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8J8-z9-PjK">
+                                        <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="OMj-jt-7Qw"/>
+                                            <constraint firstAttribute="width" constant="25" id="SRZ-wk-6MD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Button" image="Закрыть Зеленый"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="EUi-oC-499"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Новый доход" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDF-bY-ILe">
+                                        <rect key="frame" x="25" y="0.0" width="160" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="e4O-yC-wrA"/>
+                                            <constraint firstAttribute="width" constant="160" id="p9m-gB-bRj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="22"/>
+                                        <color key="textColor" red="0.49803921568627452" green="0.64313725490196072" blue="0.070588235294117646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Dg4-LI-SPR">
+                                <rect key="frame" x="20" y="211" width="374.33333333333331" height="505"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите сумму" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jbx-Yb-Feo">
+                                        <rect key="frame" x="87.666666666666686" y="0.0" width="199" height="30"/>
+                                        <color key="tintColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="199" id="Dyp-ac-pxx"/>
+                                            <constraint firstAttribute="height" constant="30" id="NXS-GY-pbU"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.49803921568627452" green="0.64313725490196072" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="yD0-f2-PIx">
+                                        <rect key="frame" x="0.0" y="80" width="374.33333333333331" height="311"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="311" id="2yY-CG-PBn"/>
+                                            <constraint firstAttribute="width" constant="374" id="m1J-h7-ex6"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="idC-bU-oZn">
+                                            <size key="itemSize" width="181" height="52"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="salaryCell" id="L95-WV-CWS" customClass="PlusCategoriesCollectionViewCell" customModule="MyMoneyVKR">
+                                                <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDw-qh-03V">
+                                                            <rect key="frame" x="2" y="0.0" width="179" height="52"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                            <state key="normal" title="💶 Зарплата">
+                                                                <color key="titleColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="salaryButton:" destination="L95-WV-CWS" eventType="touchUpInside" id="Lnj-zy-fg7"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </view>
+                                            </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="businessCell" id="vFP-DX-vdQ" customClass="PlusCategoriesCollectionViewCell" customModule="MyMoneyVKR">
+                                                <rect key="frame" x="193.33333333333334" y="0.0" width="181" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8OS-e9-bWJ">
+                                                            <rect key="frame" x="2" y="0.0" width="179" height="52"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                            <state key="normal" title="🏢 Бизнес">
+                                                                <color key="titleColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="businessButton:" destination="vFP-DX-vdQ" eventType="touchUpInside" id="sNf-xR-rm5"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </view>
+                                            </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="bankAccountCell" id="90o-aj-XGQ" customClass="PlusCategoriesCollectionViewCell" customModule="MyMoneyVKR">
+                                                <rect key="frame" x="0.0" y="62" width="181" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="co8-5Y-RzX">
+                                                            <rect key="frame" x="0.0" y="0.0" width="179" height="52"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                            <state key="normal" title="🏦 Проценты">
+                                                                <color key="titleColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="bankAccountButton:" destination="90o-aj-XGQ" eventType="touchUpInside" id="ax2-sZ-GX7"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </view>
+                                            </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="presentCell" id="zf5-6o-h3P" customClass="PlusCategoriesCollectionViewCell" customModule="MyMoneyVKR">
+                                                <rect key="frame" x="193.33333333333334" y="62" width="181" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kkq-RG-lEh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="179" height="52"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                            <state key="normal" title="🎁 Подарок">
+                                                                <color key="titleColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="presentButton:" destination="zf5-6o-h3P" eventType="touchUpInside" id="E0Q-DN-tGj"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </view>
+                                            </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="debtsCell" id="eqL-UE-VTW" customClass="PlusCategoriesCollectionViewCell" customModule="MyMoneyVKR">
+                                                <rect key="frame" x="0.0" y="124" width="181" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="887-X1-M1l">
+                                                            <rect key="frame" x="2" y="0.0" width="179" height="52"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                            <state key="normal" title="💸 Долги">
+                                                                <color key="titleColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="debtsButton:" destination="eqL-UE-VTW" eventType="touchUpInside" id="8vo-eb-9Sb"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </view>
+                                            </collectionViewCell>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="savingsCell" id="gbg-Uv-T2i" customClass="PlusCategoriesCollectionViewCell" customModule="MyMoneyVKR">
+                                                <rect key="frame" x="193.33333333333334" y="124" width="181" height="52"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxS-sv-ywW">
+                                                            <rect key="frame" x="-7" y="0.0" width="194" height="52"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                            <state key="normal" title="📦 Сбережения">
+                                                                <color key="titleColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="savingsButton:" destination="gbg-Uv-T2i" eventType="touchUpInside" id="ga1-Vg-v6T"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="wjg-VH-jLg" id="vK2-Wz-Tz9"/>
+                                            <outlet property="delegate" destination="wjg-VH-jLg" id="jxz-Tq-wIf"/>
+                                        </connections>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X8N-g1-q7k">
+                                        <rect key="frame" x="0.0" y="441" width="374.33333333333331" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="374" id="5TP-ym-DSK"/>
+                                            <constraint firstAttribute="height" constant="64" id="GWU-Gj-ElR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                        <state key="normal" title="Button" image="Подробнее"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TBK-sp-Oud" firstAttribute="centerY" secondItem="yNO-WF-i6S" secondAttribute="centerY" constant="-327.5" id="LNj-bj-0Bw"/>
+                            <constraint firstItem="TBK-sp-Oud" firstAttribute="centerX" secondItem="yNO-WF-i6S" secondAttribute="centerX" constant="-94.5" id="e5i-ex-QYu"/>
+                            <constraint firstItem="Dg4-LI-SPR" firstAttribute="centerY" secondItem="yNO-WF-i6S" secondAttribute="centerY" constant="95.5" id="rY4-dU-95h"/>
+                            <constraint firstItem="Dg4-LI-SPR" firstAttribute="centerX" secondItem="yNO-WF-i6S" secondAttribute="centerX" id="vR0-Rj-JMJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PlusCollection" destination="yD0-f2-PIx" id="5DW-xH-BTh"/>
+                        <outlet property="plusCategoriesCollection" destination="yD0-f2-PIx" id="Q7t-h7-htu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhh-50-f03" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="905.79710144927549" y="-132.88043478260872"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Говорите" width="644" height="208"/>
+        <image name="Закрыть Зеленый" width="32" height="32"/>
+        <image name="Закрыть Красный" width="32" height="32"/>
+        <image name="Минус" width="706" height="208"/>
+        <image name="Плюс" width="706" height="208"/>
+        <image name="Подробнее" width="750" height="116"/>
+        <image name="Подробнее-1" width="750" height="116"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EUi-oC-499"/>
+    </inferredMetricsTieBreakers>
+</document>

@@ -10,13 +10,21 @@ import UIKit
 import RealmSwift
 import TextFieldEffects
 
+class PlusMoneyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+  
 
-class PlusMoneyViewController: UIViewController {
     
-    @IBOutlet weak var plusCategoriesCollection: UICollectionView!
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+         cell.backgroundColor = UIColor.black
+        return cell
+    }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

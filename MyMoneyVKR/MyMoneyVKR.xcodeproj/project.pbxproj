@@ -17,7 +17,7 @@
 		3E01B2AA1E8BDECB00E95F2B /* MinusMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E01B2A91E8BDECB00E95F2B /* MinusMoney.swift */; };
 		3E01B2AC1E8D428F00E95F2B /* PlusMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E01B2AB1E8D428F00E95F2B /* PlusMoneyViewController.swift */; };
 		3E01B2AE1E8D42B900E95F2B /* MinusMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E01B2AD1E8D42B900E95F2B /* MinusMoneyViewController.swift */; };
-		3E01B2B01E8FE4D200E95F2B /* PlusCategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E01B2AF1E8FE4D200E95F2B /* PlusCategoriesCollectionViewCell.swift */; };
+		3E4EA0EA1E94F8C7001F7ABF /* PlusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4EA0E91E94F8C7001F7ABF /* PlusCollectionViewCell.swift */; };
 		8E6F4D0F1FDB9BC6A255EECD /* Pods_MyMoneyVKR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5FB73D4C355402FE147A4F /* Pods_MyMoneyVKR.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +34,7 @@
 		3E01B2A91E8BDECB00E95F2B /* MinusMoney.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinusMoney.swift; sourceTree = "<group>"; };
 		3E01B2AB1E8D428F00E95F2B /* PlusMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMoneyViewController.swift; sourceTree = "<group>"; };
 		3E01B2AD1E8D42B900E95F2B /* MinusMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinusMoneyViewController.swift; sourceTree = "<group>"; };
-		3E01B2AF1E8FE4D200E95F2B /* PlusCategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusCategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E4EA0E91E94F8C7001F7ABF /* PlusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusCollectionViewCell.swift; sourceTree = "<group>"; };
 		7DE8BE60EE6F7F2FF6F3DF1A /* Pods-MyMoneyVKR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoneyVKR.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMoneyVKR/Pods-MyMoneyVKR.release.xcconfig"; sourceTree = "<group>"; };
 		C7A7D17C30B1819606706EC8 /* Pods-MyMoneyVKR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoneyVKR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMoneyVKR/Pods-MyMoneyVKR.debug.xcconfig"; sourceTree = "<group>"; };
 		FE5FB73D4C355402FE147A4F /* Pods_MyMoneyVKR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMoneyVKR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +84,7 @@
 				3E01B2A71E8AD9AB00E95F2B /* PlusMoney.swift */,
 				3E01B2A91E8BDECB00E95F2B /* MinusMoney.swift */,
 				3E01B2AB1E8D428F00E95F2B /* PlusMoneyViewController.swift */,
-				3E01B2AF1E8FE4D200E95F2B /* PlusCategoriesCollectionViewCell.swift */,
+				3E4EA0E91E94F8C7001F7ABF /* PlusCollectionViewCell.swift */,
 			);
 			path = MyMoneyVKR;
 			sourceTree = "<group>";
@@ -231,11 +231,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E01B2AE1E8D42B900E95F2B /* MinusMoneyViewController.swift in Sources */,
-				3E01B2B01E8FE4D200E95F2B /* PlusCategoriesCollectionViewCell.swift in Sources */,
 				3E01B2941E8ACBBD00E95F2B /* ViewController.swift in Sources */,
 				3E01B2AC1E8D428F00E95F2B /* PlusMoneyViewController.swift in Sources */,
 				3E01B2A81E8AD9AB00E95F2B /* PlusMoney.swift in Sources */,
 				3E01B2921E8ACBBD00E95F2B /* AppDelegate.swift in Sources */,
+				3E4EA0EA1E94F8C7001F7ABF /* PlusCollectionViewCell.swift in Sources */,
 				3E01B2AA1E8BDECB00E95F2B /* MinusMoney.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,5 +11,6 @@ import RealmSwift
 class MinusMoney: Object {
     dynamic var name = ""
     dynamic var amount = ""
+    dynamic var category = ""
     dynamic var createdAt = NSDate()
 }

@@ -223,137 +223,23 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="L95-WV-CWS" customClass="PlusCategoriesCollectionViewCell" customModule="MyMoneyVKR">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="L95-WV-CWS" customClass="PlusCollectionViewCell" customModule="MyMoneyVKR">
                                                 <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                     <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDw-qh-03V">
-                                                            <rect key="frame" x="2" y="0.0" width="179" height="52"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uKu-8a-qnO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                            <state key="normal" title="💶 Зарплата">
-                                                                <color key="titleColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="salaryButton:" destination="L95-WV-CWS" eventType="touchUpInside" id="Lnj-zy-fg7"/>
-                                                            </connections>
-                                                        </button>
+                                                        </imageView>
                                                     </subviews>
                                                 </view>
                                                 <size key="customSize" width="181" height="52"/>
-                                            </collectionViewCell>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="web-1M-qg8" customClass="PlusCategoriesCollectionViewCell" customModule="MyMoneyVKR">
-                                                <rect key="frame" x="193.33333333333334" y="0.0" width="181" height="52"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOO-Ot-9mh">
-                                                            <rect key="frame" x="2" y="0.0" width="179" height="52"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                            <state key="normal" title="Бизнес">
-                                                                <color key="titleColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="salaryButton:" destination="web-1M-qg8" eventType="touchUpInside" id="kQ9-SR-WCx"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </view>
-                                                <size key="customSize" width="181" height="52"/>
-                                            </collectionViewCell>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="KCM-OG-Koq" customClass="PlusCategoriesCollectionViewCell" customModule="MyMoneyVKR">
-                                                <rect key="frame" x="0.0" y="62" width="181" height="52"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lbi-i6-Vh9">
-                                                            <rect key="frame" x="2" y="0.0" width="179" height="52"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                            <state key="normal" title="Подарок">
-                                                                <color key="titleColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="salaryButton:" destination="KCM-OG-Koq" eventType="touchUpInside" id="pQi-xW-aEu"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </view>
-                                                <size key="customSize" width="181" height="52"/>
-                                            </collectionViewCell>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="fYG-d2-D73" customClass="PlusCategoriesCollectionViewCell" customModule="MyMoneyVKR">
-                                                <rect key="frame" x="193.33333333333334" y="62" width="181" height="52"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXo-4A-dWX">
-                                                            <rect key="frame" x="2" y="0.0" width="179" height="52"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                            <state key="normal" title="Сбережения">
-                                                                <color key="titleColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="salaryButton:" destination="fYG-d2-D73" eventType="touchUpInside" id="Y98-fE-yNM"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </view>
-                                                <size key="customSize" width="181" height="52"/>
-                                            </collectionViewCell>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="p8w-pT-YR8" customClass="PlusCategoriesCollectionViewCell" customModule="MyMoneyVKR">
-                                                <rect key="frame" x="0.0" y="124" width="181" height="52"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jeq-pO-Ww9">
-                                                            <rect key="frame" x="2" y="0.0" width="179" height="52"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                            <state key="normal" title="Проценты">
-                                                                <color key="titleColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="salaryButton:" destination="p8w-pT-YR8" eventType="touchUpInside" id="uQM-Iy-7Ah"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </view>
-                                                <size key="customSize" width="181" height="52"/>
-                                            </collectionViewCell>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gXC-SK-pUa" customClass="PlusCategoriesCollectionViewCell" customModule="MyMoneyVKR">
-                                                <rect key="frame" x="193.33333333333334" y="124" width="181" height="52"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                    <rect key="frame" x="0.0" y="0.0" width="181" height="52"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogb-qa-oC7">
-                                                            <rect key="frame" x="2" y="0.0" width="179" height="52"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                                            <state key="normal" title="Долги">
-                                                                <color key="titleColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </state>
-                                                            <connections>
-                                                                <action selector="salaryButton:" destination="gXC-SK-pUa" eventType="touchUpInside" id="Gql-9y-xgn"/>
-                                                            </connections>
-                                                        </button>
-                                                    </subviews>
-                                                </view>
-                                                <size key="customSize" width="181" height="52"/>
+                                                <connections>
+                                                    <outlet property="imageCategory" destination="uKu-8a-qnO" id="BRj-zn-Xcj"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                         <connections>
@@ -369,9 +255,19 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="1"/>
                                         <state key="normal" title="Button" image="Подробнее"/>
+                                        <connections>
+                                            <action selector="addPlusMoneyButton:" destination="wjg-VH-jLg" eventType="touchUpInside" id="pLD-wt-QrI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Откуда у Вас деньги?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uo8-Nm-Gh4">
+                                <rect key="frame" x="57" y="157" width="300" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -381,6 +277,10 @@
                             <constraint firstItem="Dg4-LI-SPR" firstAttribute="centerX" secondItem="yNO-WF-i6S" secondAttribute="centerX" id="vR0-Rj-JMJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountOfPlusMoney" destination="Jbx-Yb-Feo" id="wAe-kP-zaS"/>
+                        <outlet property="nameOfPlusMoney" destination="Uo8-Nm-Gh4" id="4lw-i1-zGO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhh-50-f03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

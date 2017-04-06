@@ -11,11 +11,11 @@ import RealmSwift
 import TextFieldEffects
 
 class ViewController: UIViewController {
-
-    let realmPlusMoney = try! Realm()
-    let NewPlusMoney = PlusMoney()
-    let realmMinusMoney = try! Realm()
-    let NewMinusMoney = MinusMoney()
+    
+//    let realmPlusMoney = try! Realm()
+  //  let NewPlusMoney = PlusMoney()
+    //let realmMinusMoney = try! Realm()
+    //let NewMinusMoney = MinusMoney()
 
     
     
@@ -24,26 +24,26 @@ class ViewController: UIViewController {
      //   NewPlusMoney.name = NamePlusMoney.text!
        // NewPlusMoney.amount = PlusMoneyTextField.text!
         
-        try! realmPlusMoney.write{
-            realmPlusMoney.add(NewPlusMoney)
+      //  try! realmPlusMoney.write{
+        //    realmPlusMoney.add(NewPlusMoney)
         }
         
         //NamePlusMoney.text = ""
         //PlusMoneyTextField.text = ""
-    }
+    
         
     @IBAction func newMinusMoneyButton(_ sender: Any) {
         //NewMinusMoney.name = NamePlusMoney.text!
         //NewMinusMoney.amount = PlusMoneyTextField.text!
         
-        try! realmMinusMoney.write{
-            realmMinusMoney.add(NewMinusMoney)
+   //     try! realmMinusMoney.write{
+     //       realmMinusMoney.add(NewMinusMoney)
         }
         
         //NamePlusMoney.text = ""
         //PlusMoneyTextField.text = ""
 
-    }
+    
     
 
     

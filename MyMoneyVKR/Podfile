@@ -8,4 +8,6 @@ target 'MyMoneyVKR' do
   # Pods for MyMoneyVKR
 pod 'RealmSwift'
 pod "TextFieldEffects"
+pod 'Charts'
+pod 'JTAppleCalendar'
 end

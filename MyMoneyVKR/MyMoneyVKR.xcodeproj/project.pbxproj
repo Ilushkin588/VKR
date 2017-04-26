@@ -17,7 +17,14 @@
 		3E01B2AA1E8BDECB00E95F2B /* MinusMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E01B2A91E8BDECB00E95F2B /* MinusMoney.swift */; };
 		3E01B2AC1E8D428F00E95F2B /* PlusMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E01B2AB1E8D428F00E95F2B /* PlusMoneyViewController.swift */; };
 		3E01B2AE1E8D42B900E95F2B /* MinusMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E01B2AD1E8D42B900E95F2B /* MinusMoneyViewController.swift */; };
+		3E08427F1E9CDA5E00A8D50A /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E08427E1E9CDA5E00A8D50A /* StartViewController.swift */; };
+		3E0842931E9FA6DC00A8D50A /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0842921E9FA6DC00A8D50A /* MoreInfoViewController.swift */; };
+		3E0842961EA0162300A8D50A /* MoreInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0842941EA0162300A8D50A /* MoreInfoTableViewCell.swift */; };
+		3E0842971EA0162300A8D50A /* MoreInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E0842951EA0162300A8D50A /* MoreInfoTableViewCell.xib */; };
 		3E4EA0EA1E94F8C7001F7ABF /* PlusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4EA0E91E94F8C7001F7ABF /* PlusCollectionViewCell.swift */; };
+		3E4EA0EC1E9BC8E3001F7ABF /* MinusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4EA0EB1E9BC8E3001F7ABF /* MinusCollectionViewCell.swift */; };
+		3E6691191EAF4F91003FED70 /* CalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6691181EAF4F91003FED70 /* CalendarCell.xib */; };
+		3E66911B1EAF5058003FED70 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E66911A1EAF5057003FED70 /* CalendarCell.swift */; };
 		8E6F4D0F1FDB9BC6A255EECD /* Pods_MyMoneyVKR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5FB73D4C355402FE147A4F /* Pods_MyMoneyVKR.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +41,14 @@
 		3E01B2A91E8BDECB00E95F2B /* MinusMoney.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinusMoney.swift; sourceTree = "<group>"; };
 		3E01B2AB1E8D428F00E95F2B /* PlusMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMoneyViewController.swift; sourceTree = "<group>"; };
 		3E01B2AD1E8D42B900E95F2B /* MinusMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinusMoneyViewController.swift; sourceTree = "<group>"; };
+		3E08427E1E9CDA5E00A8D50A /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		3E0842921E9FA6DC00A8D50A /* MoreInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
+		3E0842941EA0162300A8D50A /* MoreInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreInfoTableViewCell.swift; sourceTree = "<group>"; };
+		3E0842951EA0162300A8D50A /* MoreInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoreInfoTableViewCell.xib; sourceTree = "<group>"; };
 		3E4EA0E91E94F8C7001F7ABF /* PlusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E4EA0EB1E9BC8E3001F7ABF /* MinusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinusCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E6691181EAF4F91003FED70 /* CalendarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarCell.xib; sourceTree = "<group>"; };
+		3E66911A1EAF5057003FED70 /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		7DE8BE60EE6F7F2FF6F3DF1A /* Pods-MyMoneyVKR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoneyVKR.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMoneyVKR/Pods-MyMoneyVKR.release.xcconfig"; sourceTree = "<group>"; };
 		C7A7D17C30B1819606706EC8 /* Pods-MyMoneyVKR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoneyVKR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMoneyVKR/Pods-MyMoneyVKR.debug.xcconfig"; sourceTree = "<group>"; };
 		FE5FB73D4C355402FE147A4F /* Pods_MyMoneyVKR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMoneyVKR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +92,7 @@
 				3E01B2931E8ACBBD00E95F2B /* ViewController.swift */,
 				3E01B2951E8ACBBD00E95F2B /* Main.storyboard */,
 				3E01B2AD1E8D42B900E95F2B /* MinusMoneyViewController.swift */,
+				3E4EA0EB1E9BC8E3001F7ABF /* MinusCollectionViewCell.swift */,
 				3E01B2981E8ACBBD00E95F2B /* Assets.xcassets */,
 				3E01B29A1E8ACBBD00E95F2B /* LaunchScreen.storyboard */,
 				3E01B29D1E8ACBBD00E95F2B /* Info.plist */,
@@ -85,6 +100,12 @@
 				3E01B2A91E8BDECB00E95F2B /* MinusMoney.swift */,
 				3E01B2AB1E8D428F00E95F2B /* PlusMoneyViewController.swift */,
 				3E4EA0E91E94F8C7001F7ABF /* PlusCollectionViewCell.swift */,
+				3E08427E1E9CDA5E00A8D50A /* StartViewController.swift */,
+				3E0842921E9FA6DC00A8D50A /* MoreInfoViewController.swift */,
+				3E0842941EA0162300A8D50A /* MoreInfoTableViewCell.swift */,
+				3E0842951EA0162300A8D50A /* MoreInfoTableViewCell.xib */,
+				3E6691181EAF4F91003FED70 /* CalendarCell.xib */,
+				3E66911A1EAF5057003FED70 /* CalendarCell.swift */,
 			);
 			path = MyMoneyVKR;
 			sourceTree = "<group>";
@@ -171,7 +192,9 @@
 				3E01B29C1E8ACBBD00E95F2B /* LaunchScreen.storyboard in Resources */,
 				3E01B2991E8ACBBD00E95F2B /* Assets.xcassets in Resources */,
 				3E01B2A41E8ACC5400E95F2B /* Podfile in Resources */,
+				3E0842971EA0162300A8D50A /* MoreInfoTableViewCell.xib in Resources */,
 				3E01B2971E8ACBBD00E95F2B /* Main.storyboard in Resources */,
+				3E6691191EAF4F91003FED70 /* CalendarCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,8 +256,13 @@
 				3E01B2AE1E8D42B900E95F2B /* MinusMoneyViewController.swift in Sources */,
 				3E01B2941E8ACBBD00E95F2B /* ViewController.swift in Sources */,
 				3E01B2AC1E8D428F00E95F2B /* PlusMoneyViewController.swift in Sources */,
+				3E4EA0EC1E9BC8E3001F7ABF /* MinusCollectionViewCell.swift in Sources */,
 				3E01B2A81E8AD9AB00E95F2B /* PlusMoney.swift in Sources */,
+				3E08427F1E9CDA5E00A8D50A /* StartViewController.swift in Sources */,
+				3E0842961EA0162300A8D50A /* MoreInfoTableViewCell.swift in Sources */,
+				3E66911B1EAF5058003FED70 /* CalendarCell.swift in Sources */,
 				3E01B2921E8ACBBD00E95F2B /* AppDelegate.swift in Sources */,
+				3E0842931E9FA6DC00A8D50A /* MoreInfoViewController.swift in Sources */,
 				3E4EA0EA1E94F8C7001F7ABF /* PlusCollectionViewCell.swift in Sources */,
 				3E01B2AA1E8BDECB00E95F2B /* MinusMoney.swift in Sources */,
 			);

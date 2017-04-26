@@ -9,8 +9,15 @@
 import RealmSwift
 
 class MinusMoney: Object {
+    dynamic var id = ""
+    dynamic var type = ""
     dynamic var name = ""
-    dynamic var amount = ""
+    dynamic var amount = 0
     dynamic var category = ""
-    dynamic var createdAt = NSDate()
+    dynamic var createdAT = NSDate()
+    
+    override static func primaryKey() -> String?{
+        return "id"
+    }
+
 }

@@ -25,6 +25,7 @@
 		3E4EA0EC1E9BC8E3001F7ABF /* MinusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4EA0EB1E9BC8E3001F7ABF /* MinusCollectionViewCell.swift */; };
 		3E6691191EAF4F91003FED70 /* CalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E6691181EAF4F91003FED70 /* CalendarCell.xib */; };
 		3E66911B1EAF5058003FED70 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E66911A1EAF5057003FED70 /* CalendarCell.swift */; };
+		3EDAFC291EB38551009D4A51 /* SpeechRecordingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDAFC281EB38550009D4A51 /* SpeechRecordingViewController.swift */; };
 		8E6F4D0F1FDB9BC6A255EECD /* Pods_MyMoneyVKR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5FB73D4C355402FE147A4F /* Pods_MyMoneyVKR.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		3E4EA0EB1E9BC8E3001F7ABF /* MinusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinusCollectionViewCell.swift; sourceTree = "<group>"; };
 		3E6691181EAF4F91003FED70 /* CalendarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalendarCell.xib; sourceTree = "<group>"; };
 		3E66911A1EAF5057003FED70 /* CalendarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		3EDAFC281EB38550009D4A51 /* SpeechRecordingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecordingViewController.swift; sourceTree = "<group>"; };
 		7DE8BE60EE6F7F2FF6F3DF1A /* Pods-MyMoneyVKR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoneyVKR.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyMoneyVKR/Pods-MyMoneyVKR.release.xcconfig"; sourceTree = "<group>"; };
 		C7A7D17C30B1819606706EC8 /* Pods-MyMoneyVKR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyMoneyVKR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyMoneyVKR/Pods-MyMoneyVKR.debug.xcconfig"; sourceTree = "<group>"; };
 		FE5FB73D4C355402FE147A4F /* Pods_MyMoneyVKR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyMoneyVKR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +108,7 @@
 				3E0842951EA0162300A8D50A /* MoreInfoTableViewCell.xib */,
 				3E6691181EAF4F91003FED70 /* CalendarCell.xib */,
 				3E66911A1EAF5057003FED70 /* CalendarCell.swift */,
+				3EDAFC281EB38550009D4A51 /* SpeechRecordingViewController.swift */,
 			);
 			path = MyMoneyVKR;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				TargetAttributes = {
 					3E01B28D1E8ACBBD00E95F2B = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 8RFVYUMW89;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -265,6 +269,7 @@
 				3E0842931E9FA6DC00A8D50A /* MoreInfoViewController.swift in Sources */,
 				3E4EA0EA1E94F8C7001F7ABF /* PlusCollectionViewCell.swift in Sources */,
 				3E01B2AA1E8BDECB00E95F2B /* MinusMoney.swift in Sources */,
+				3EDAFC291EB38551009D4A51 /* SpeechRecordingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,9 +393,10 @@
 			baseConfigurationReference = C7A7D17C30B1819606706EC8 /* Pods-MyMoneyVKR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8RFVYUMW89;
 				INFOPLIST_FILE = MyMoneyVKR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Denisovs.MyMoneyVKR;
+				PRODUCT_BUNDLE_IDENTIFIER = VorobyevsDenisovs.MyMoneyVKR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -401,9 +407,10 @@
 			baseConfigurationReference = 7DE8BE60EE6F7F2FF6F3DF1A /* Pods-MyMoneyVKR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8RFVYUMW89;
 				INFOPLIST_FILE = MyMoneyVKR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Denisovs.MyMoneyVKR;
+				PRODUCT_BUNDLE_IDENTIFIER = VorobyevsDenisovs.MyMoneyVKR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

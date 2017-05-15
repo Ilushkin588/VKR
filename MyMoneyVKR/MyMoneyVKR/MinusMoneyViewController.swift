@@ -30,13 +30,11 @@ class MinusMoneyViewController: UIViewController, UICollectionViewDelegate, UICo
     
     //Выбор типа дохода
     @IBAction func typeMinusMoneySegmentControl(_ sender: Any) {
-        switch typeMinusMoneySegmentControl.selectedSegmentIndex{
-        case 0:
-            typeMinusMoney = "наличные"
-        case 1:
-            typeMinusMoney = "карта"
-        default:
-            break
+        if typeMinusMoneySegmentControl.selectedSegmentIndex == 0 {
+            typeMinusMoney = "Наличные"
+        }
+        else {
+            typeMinusMoney = "Карта"
         }
     }
     
@@ -44,8 +42,13 @@ class MinusMoneyViewController: UIViewController, UICollectionViewDelegate, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.hideKeyboardWhenTappedAround() 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        typeMinusMoneySegmentControl.selectedSegmentIndex = 0
+        typeMinusMoneySegmentControl((Any).self)
     }
     
     override func didReceiveMemoryWarning() {

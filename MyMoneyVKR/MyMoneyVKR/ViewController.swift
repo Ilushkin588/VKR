@@ -10,49 +10,46 @@ import UIKit
 import RealmSwift
 import TextFieldEffects
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 class ViewController: UIViewController {
     
-//    let realmPlusMoney = try! Realm()
-  //  let NewPlusMoney = PlusMoney()
-    //let realmMinusMoney = try! Realm()
-    //let NewMinusMoney = MinusMoney()
-
+    @IBOutlet var gestureOutlet: UITapGestureRecognizer!
     
-    
+    @IBAction func gesture(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func newPlusMoneyButton(_ sender: Any) {
-     //   NewPlusMoney.name = NamePlusMoney.text!
-       // NewPlusMoney.amount = PlusMoneyTextField.text!
-        
-      //  try! realmPlusMoney.write{
-        //    realmPlusMoney.add(NewPlusMoney)
         }
-        
-        //NamePlusMoney.text = ""
-        //PlusMoneyTextField.text = ""
-    
         
     @IBAction func newMinusMoneyButton(_ sender: Any) {
-        //NewMinusMoney.name = NamePlusMoney.text!
-        //NewMinusMoney.amount = PlusMoneyTextField.text!
-        
-   //     try! realmMinusMoney.write{
-     //       realmMinusMoney.add(NewMinusMoney)
         }
-        
-        //NamePlusMoney.text = ""
-        //PlusMoneyTextField.text = ""
-
+    
+   
+    
+    @IBOutlet var viewForDismissTap: UIView!
     
     
-
-    
-    
-    
+    func screenTapped(){
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
-   
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(screenTapped))
+        tapGesture.numberOfTapsRequired = 1
+        viewForDismissTap.addGestureRecognizer(tapGesture)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

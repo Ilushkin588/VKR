@@ -25,30 +25,32 @@ class PlusMoneyViewController: UIViewController, UICollectionViewDelegate, UICol
     
     @IBOutlet weak var nameOfPlusMoney: UITextField!
     @IBOutlet weak var amountOfPlusMoney: UITextField!
-    
-    
-    let plusMoneyCellReuseIdentifier = "cell"
+    @IBOutlet weak var typeSegmentControl: UISegmentedControl!
+        let plusMoneyCellReuseIdentifier = "cell"
     let itemsPlusMoney = ["Зарплата", "Бизнес", "Долги", "Подарок", "Проценты", "Сбережения"]
     let plusMoneyImageArray = [UIImage(named:"salary"), UIImage(named:"business"), UIImage(named:"debts"), UIImage(named:"present"), UIImage(named:"procents"), UIImage(named:"savings")]
     
-    @IBOutlet weak var typeSegmentControl: UISegmentedControl!
+   
     
     // Выбор типа дохода
     @IBAction func typeChooseSegmentControl(_ sender: Any) {
-        switch typeSegmentControl.selectedSegmentIndex{
-    case 0:
-        typePlusMoney = "Наличные"
-    case 1:
-        typePlusMoney = "Карта"
-    default:
-        break
+        if typeSegmentControl.selectedSegmentIndex == 0 {
+            typePlusMoney = "Наличные"
         }
-        
+        else {
+            typePlusMoney = "Карта"
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+        
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        typeSegmentControl.selectedSegmentIndex = 0
+        typeChooseSegmentControl((Any).self)
     }
 
     override func didReceiveMemoryWarning() {

@@ -18,6 +18,7 @@ struct cellData {
     let imageType : UIImage!
     let emojiImage : UIImage!
 }
+let formatter = DateFormatter()
 
 func fillTheCellData() -> [cellData]{
     let realmMoney = try! Realm()
@@ -99,7 +100,7 @@ func fillTheCellData() -> [cellData]{
 
     let array = fillTheCellData()
     var filteredArray = fillTheCellData()
-    //filteredArray = filteredArray.sorted() {$0.time > $1.time}
+
 extension Date {
     
     // formatted date
@@ -117,12 +118,15 @@ extension Date {
         dateFormatterTime.locale = NSLocale(localeIdentifier: "RU") as Locale!
         return dateFormatterTime.string(from: time as Date)
     }
-    
+    // startDate
     func startDate() -> Date{
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd MMMM, EEEE" //"yyyy MM dd"
+        formatter.dateFormat = "yyyy MM dd" // "dd MMMM, EEEE" //"yyyy MM dd"
         formatter.locale = NSLocale(localeIdentifier: "RU") as Locale!
-        return formatter.date(from: "01 марта, среда")!
+        
+        let startDate = formatter.date(from: "2017 03 01")
+        formatter.dateFormat = "dd MMMM, EEEE"
+        return startDate!
     }
 
 }
@@ -133,6 +137,8 @@ class MoreInfoViewController: UIViewController, UITableViewDelegate, UITableView
     let blue = UIColor(red: 2.0/255.0, green: 164.0/255.0, blue: 239.0/255.0, alpha: 1.0)
     
     
+    @IBOutlet weak var monthLabel: UILabel!
+    @IBOutlet weak var yearLabel: UILabel!
     
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var historyTableView: UITableView!
@@ -204,6 +210,11 @@ class MoreInfoViewController: UIViewController, UITableViewDelegate, UITableView
         handleCellTextColor(view: cell, cellState: cellState)
     }
     
+    func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
+
+       setupViewsOfCalendar(from: visibleDates)
+    }
+    
    
     
     override func viewDidLoad() {
@@ -212,6 +223,19 @@ class MoreInfoViewController: UIViewController, UITableViewDelegate, UITableView
         calendarView.dataSource = self
         calendarView.delegate = self
         calendarView.registerCellViewXib(file: "CalendarCell") // Registering cell is manditory
+        
+        calendarView.visibleDates { visibleDates in self.setupViewsOfCalendar(from: visibleDates) }
+        
+    }
+    
+    func setupViewsOfCalendar(from visibleDates: DateSegmentInfo) {
+        let date = visibleDates.monthDates.first!
+        formatter.locale = NSLocale(localeIdentifier: "RU") as Locale!
+        formatter.dateFormat = "yyyy"
+        yearLabel.text = formatter.string(from: date)
+        formatter.dateFormat = "MMMM"
+        monthLabel.text = formatter.string(from: date)
+
     }
 
     

@@ -165,7 +165,7 @@
 				TargetAttributes = {
 					3E01B28D1E8ACBBD00E95F2B = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = 8RFVYUMW89;
+						DevelopmentTeam = CYX7FBJQG8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -393,10 +393,10 @@
 			baseConfigurationReference = C7A7D17C30B1819606706EC8 /* Pods-MyMoneyVKR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8RFVYUMW89;
+				DEVELOPMENT_TEAM = CYX7FBJQG8;
 				INFOPLIST_FILE = MyMoneyVKR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = VorobyevsDenisovs.MyMoneyVKR;
+				PRODUCT_BUNDLE_IDENTIFIER = NikolaevaDenisovs.MyMoneyVKR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -407,10 +407,10 @@
 			baseConfigurationReference = 7DE8BE60EE6F7F2FF6F3DF1A /* Pods-MyMoneyVKR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8RFVYUMW89;
+				DEVELOPMENT_TEAM = CYX7FBJQG8;
 				INFOPLIST_FILE = MyMoneyVKR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = VorobyevsDenisovs.MyMoneyVKR;
+				PRODUCT_BUNDLE_IDENTIFIER = NikolaevaDenisovs.MyMoneyVKR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

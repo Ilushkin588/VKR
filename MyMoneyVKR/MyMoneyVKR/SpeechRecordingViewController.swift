@@ -65,19 +65,21 @@ class SpeechRecordingViewController: UIViewController, SFSpeechRecognizerDelegat
             audioEngine.stop()
             recognitionRequest?.endAudio()
             speechRecordingButton.isEnabled = false
-            speechRecordingButton.setTitle("Start Recording", for: .normal)
+         //   speechRecordingButton.setTitle("Start Recording", for: .normal)
         } else {
             startRecording()
-            speechRecordingButton.setTitle("Stop Recording", for: .normal)
+            //speechRecordingButton.setTitle("Stop Recording", for: .normal)
         }
 
         
     }
     
     func chooseTheNeededMoneyController (firstSpokenWordString: String){
+        sleep(4)
         switch firstSpokenWordString{
-        case "плюс":
+        case "+":
             let plusViewController = storyBoard.instantiateViewController(withIdentifier: "plusMoneyController") as! PlusMoneyViewController
+        
             self.present(plusViewController, animated: true, completion: nil)
             
         //case "минус":
@@ -120,16 +122,21 @@ class SpeechRecordingViewController: UIViewController, SFSpeechRecognizerDelegat
             
             var isFinal = false
             var firstWordString: String = ""
+            var bestString: String?
             if result != nil {
-                let bestString = result?.bestTranscription.formattedString
-
+                bestString = result?.bestTranscription.formattedString
                 self.recognizedSpeech.text = bestString
                 isFinal = (result?.isFinal)!
-                let indexOfFirstSpace = bestString?.range(of: " ")?.lowerBound
-                firstWordString = (bestString?.substring(to: indexOfFirstSpace!))!
+//                if let indexOfFirstSpace = bestString?.range(of: " ")?.lowerBound {
+//                    print("kek")
+//                    firstWordString = (bestString?.substring(to: indexOfFirstSpace))!
+//                   // self.chooseTheNeededMoneyController(firstSpokenWordString: firstWordString)
+//                } else{
+//                    print ("nihua")
+//                    //firstWordString = (bestString?.substring(to: indexOfFirstSpace!))!
+//                }
+//            self.chooseTheNeededMoneyController(firstSpokenWordString: firstWordString)
             }
-            self.chooseTheNeededMoneyController(firstSpokenWordString: firstWordString)
-            
             
             if error != nil || isFinal {
                 self.audioEngine.stop()

@@ -527,6 +527,7 @@
                         <constraints>
                             <constraint firstItem="hwH-Ko-FZT" firstAttribute="leading" secondItem="2al-si-G5Q" secondAttribute="trailing" constant="-1" id="7gA-J8-GXt"/>
                             <constraint firstItem="A2V-A1-gNV" firstAttribute="leading" secondItem="TBN-Ua-2wZ" secondAttribute="leadingMargin" id="AVf-c7-PHe"/>
+                            <constraint firstItem="Vhj-nK-PWj" firstAttribute="leading" secondItem="8nD-2K-cMW" secondAttribute="trailing" id="CdT-hn-Vfj"/>
                             <constraint firstItem="KFl-D5-Gc2" firstAttribute="leading" secondItem="TBN-Ua-2wZ" secondAttribute="leading" constant="20" id="DzD-SK-WhY"/>
                             <constraint firstItem="8nD-2K-cMW" firstAttribute="leading" secondItem="TBN-Ua-2wZ" secondAttribute="leading" constant="20" id="HR2-VR-d9B"/>
                             <constraint firstItem="KFl-D5-Gc2" firstAttribute="top" secondItem="Vhj-nK-PWj" secondAttribute="bottom" constant="7" id="I6w-Tx-oml"/>
@@ -720,6 +721,6 @@
         <image name="Подробнее-1" width="750" height="116"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PAr-9a-rke"/>
+        <segue reference="MPZ-b1-ZxW"/>
     </inferredMetricsTieBreakers>
 </document>

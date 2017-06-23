@@ -60,7 +60,14 @@ class SpeechRecordingViewController: UIViewController, SFSpeechRecognizerDelegat
         // Dispose of any resources that can be recreated.
     }
     
+    @IBOutlet weak var colorView: UIView!
+    
     @IBAction func speechRecordingFunction(_ sender: Any) {
+        if (colorView.backgroundColor == UIColor.red){
+        colorView.backgroundColor = UIColor.green
+        } else{
+            colorView.backgroundColor = UIColor.red
+        }
         if audioEngine.isRunning {
             audioEngine.stop()
             recognitionRequest?.endAudio()
@@ -73,19 +80,50 @@ class SpeechRecordingViewController: UIViewController, SFSpeechRecognizerDelegat
 
         
     }
-    
-    func chooseTheNeededMoneyController (firstSpokenWordString: String){
-        sleep(4)
-        switch firstSpokenWordString{
-        case "+":
-            let plusViewController = storyBoard.instantiateViewController(withIdentifier: "plusMoneyController") as! PlusMoneyViewController
+    var firstSpokenWordString = ""
+    func chooseTheNeededMoneyController (spokenString: String){
+        var correctSentence = spokenString
         
-            self.present(plusViewController, animated: true, completion: nil)
+        //Finding the type(Plus or Minus)
+        if let indexOfFirstSpace = spokenString.range(of: " ")?.lowerBound {
+            if (indexOfFirstSpace != spokenString.index(after: spokenString.startIndex)){
+                correctSentence = spokenString.substring(to: spokenString.index(after: spokenString.startIndex)) + " " + spokenString.substring(from: spokenString.index(after: spokenString.startIndex))
+                print (correctSentence)
+                if let indexOfCorrectFirstSpace = correctSentence.range(of: " ")?.lowerBound{
+                    firstSpokenWordString = correctSentence.substring(to: (indexOfCorrectFirstSpace))
+                }
+            } else {
+                firstSpokenWordString = spokenString.substring(to: (indexOfFirstSpace))
+            }
             
-        //case "минус":
-        default:
-            let minusViewController = storyBoard.instantiateViewController(withIdentifier: "minusMoneyController") as! MinusMoneyViewController
-            self.present(minusViewController, animated: true, completion: nil)
+        //Finding the amount of the money
+            if let indexOfTheBeginningOfTheLastPart = correctSentence.range(of: " ")?.upperBound {
+                let theLastPartOfThePhrase = correctSentence.substring(from: (indexOfTheBeginningOfTheLastPart))
+                let indexOfSecondSpace = theLastPartOfThePhrase.range(of: " ")?.lowerBound
+                let moneyAmount = theLastPartOfThePhrase.substring(to:(indexOfSecondSpace)!)
+        //Finding the name of the money
+                if let indexOfTheBeginningOfTheNamePart = theLastPartOfThePhrase.range(of: " ")?.upperBound {
+                    let theNamePart = theLastPartOfThePhrase.substring(from: (indexOfTheBeginningOfTheNamePart))
+                    if let theIndexOfNeededNamePart = theNamePart.range(of: " ")?.upperBound{
+                        let theNeededNamePart = theNamePart.substring(from: (theIndexOfNeededNamePart))
+            
+                        switch firstSpokenWordString{
+                        case "+":
+                            let plusViewController = storyBoard.instantiateViewController(withIdentifier: "plusMoneyController") as! PlusMoneyViewController
+                            self.present(plusViewController, animated: true, completion: nil)
+                            plusViewController.amountOfPlusMoney.text = moneyAmount
+                            plusViewController.nameOfPlusMoney.text = theNeededNamePart
+                        default:
+                            let minusViewController = storyBoard.instantiateViewController(withIdentifier: "minusMoneyController") as! MinusMoneyViewController
+                            self.present(minusViewController, animated: true, completion: nil)
+                            if (moneyAmount != "" && theNeededNamePart != ""){
+                                minusViewController.amountOfMinusMoney.text = moneyAmount
+                                minusViewController.nameOfMinusMoney.text = theNeededNamePart
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -121,23 +159,13 @@ class SpeechRecordingViewController: UIViewController, SFSpeechRecognizerDelegat
         recognitionTask = speechRecognizer?.recognitionTask(with: recognitionRequest, resultHandler: { (result, error) in
             
             var isFinal = false
-            var firstWordString: String = ""
-            var bestString: String?
+            //var firstWordString: String = ""
+            var bestString: String? = " "
             if result != nil {
                 bestString = result?.bestTranscription.formattedString
                 self.recognizedSpeech.text = bestString
                 isFinal = (result?.isFinal)!
-//                if let indexOfFirstSpace = bestString?.range(of: " ")?.lowerBound {
-//                    print("kek")
-//                    firstWordString = (bestString?.substring(to: indexOfFirstSpace))!
-//                   // self.chooseTheNeededMoneyController(firstSpokenWordString: firstWordString)
-//                } else{
-//                    print ("nihua")
-//                    //firstWordString = (bestString?.substring(to: indexOfFirstSpace!))!
-//                }
-//            self.chooseTheNeededMoneyController(firstSpokenWordString: firstWordString)
             }
-            
             if error != nil || isFinal {
                 self.audioEngine.stop()
                 inputNode.removeTap(onBus: 0)
@@ -146,6 +174,8 @@ class SpeechRecordingViewController: UIViewController, SFSpeechRecognizerDelegat
                 self.recognitionTask = nil
                 
                 self.speechRecordingButton.isEnabled = true
+                
+                self.chooseTheNeededMoneyController(spokenString: self.recognizedSpeech.text)
             }
         })
         
@@ -173,8 +203,6 @@ class SpeechRecordingViewController: UIViewController, SFSpeechRecognizerDelegat
             speechRecordingButton.isEnabled = false
         }
     }
-  
-   
     
 
     /*

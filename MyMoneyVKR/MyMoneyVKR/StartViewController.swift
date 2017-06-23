@@ -15,6 +15,12 @@ class StartViewController: UIViewController{
     
     @IBOutlet weak var pieChartBalance: PieChartView!
     
+   
+    @IBAction func moreInfoButton(_ sender: Any) {
+        let moreInfoViewController = storyboard?.instantiateViewController(withIdentifier: "moreInfoViewController") as! MoreInfoViewController
+        self.present(moreInfoViewController, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -25,6 +31,7 @@ class StartViewController: UIViewController{
         super.viewWillAppear(animated) // No need for semicolon
          balanceLabel.text = countTheBalance()
          updatePieChartWithData()
+        print(NSDate())
     }
     
     override func didReceiveMemoryWarning() {
@@ -74,10 +81,12 @@ class StartViewController: UIViewController{
             let dataEntry = PieChartDataEntry(value: Double(moneyAmount), label:moneyCategory)
                 dataEntries.append(dataEntry)
         }
-        let chartDataSet = PieChartDataSet(values: dataEntries, label: "Денег потрачено")
+        let chartDataSet = PieChartDataSet(values: dataEntries, label: "")
         chartDataSet.colors = ChartColorTemplates.colorful()
         let chartData = PieChartData(dataSet: chartDataSet)
         pieChartBalance.data = chartData
+        
+        pieChartBalance.chartDescription?.text = "Статистика расходов"
     }
 
     /*

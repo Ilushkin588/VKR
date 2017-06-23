@@ -77,6 +77,7 @@ class MinusMoneyViewController: UIViewController, UICollectionViewDelegate, UICo
     
     
     @IBAction func addMinusMoneyButton(_ sender: Any) {
+        
         if (nameOfMinusMoney.text! != "" && amountOfMinusMoney.text! != "" && categoryMinusMoney != "" && typeMinusMoney != "") {
             let newMinusMoney = MinusMoney()
             let uuid = UUID().uuidString
@@ -93,7 +94,7 @@ class MinusMoneyViewController: UIViewController, UICollectionViewDelegate, UICo
             nameOfMinusMoney.text = ""
             amountOfMinusMoney.text = ""
         } else{
-            let alert = UIAlertController(title: "Упс!", message: "Вы забыли ввести свой доход!", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "Упс!", message: "Вы забыли ввести свой расход!", preferredStyle: UIAlertControllerStyle.alert)
             
             alert.addAction(UIAlertAction(title: "Попробовать еще раз", style: UIAlertActionStyle.default, handler: nil))
             

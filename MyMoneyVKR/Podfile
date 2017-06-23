@@ -9,5 +9,6 @@ target 'MyMoneyVKR' do
 pod 'RealmSwift'
 pod "TextFieldEffects"
 pod 'Charts'
-pod 'JTAppleCalendar'
+pod 'JTAppleCalendar', '~> 6.1.5'
 end
+

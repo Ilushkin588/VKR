@@ -54,6 +54,7 @@
                                 <rect key="frame" x="20" y="458" width="280" height="90"/>
                                 <state key="normal" title="Button" image="moreInfo"/>
                                 <connections>
+                                    <action selector="moreInfoButton:" destination="cHe-1S-wP3" eventType="touchUpInside" id="9jv-JX-2hk"/>
                                     <segue destination="eHp-WC-qDy" kind="show" id="cLQ-hn-j7r"/>
                                 </connections>
                             </button>
@@ -86,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTN-Pr-Dof" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="251.25" y="137.32394366197184"/>
+            <point key="canvasLocation" x="-1166" y="185"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -165,12 +166,12 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1038.75" y="137.5"/>
+            <point key="canvasLocation" x="-49" y="519"/>
         </scene>
         <!--More Info View Controller-->
         <scene sceneID="NeY-5m-yXh">
             <objects>
-                <viewController id="eHp-WC-qDy" customClass="MoreInfoViewController" customModule="MyMoneyVKR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="moreInfoViewController" id="eHp-WC-qDy" customClass="MoreInfoViewController" customModule="MyMoneyVKR" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kod-ie-zxX"/>
                         <viewControllerLayoutGuide type="bottom" id="atc-IN-yLj"/>
@@ -211,7 +212,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="backBlue"/>
                                 <connections>
-                                    <segue destination="cHe-1S-wP3" kind="show" id="h7B-Ux-1Ql"/>
+                                    <action selector="backButtonArrow:" destination="eHp-WC-qDy" eventType="touchUpInside" id="aQY-3R-0K0"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDH-Re-l6K" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
@@ -224,6 +225,9 @@
                                     <constraint firstAttribute="height" constant="32" id="yht-f6-xhd"/>
                                 </constraints>
                                 <state key="normal" title="Подробнее"/>
+                                <connections>
+                                    <action selector="backButtonText:" destination="eHp-WC-qDy" eventType="touchUpInside" id="Evs-9b-kgq"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2z-V1-Tmh">
                                 <rect key="frame" x="28" y="76" width="77" height="24"/>
@@ -314,7 +318,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueZ-2X-ocJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-515.625" y="891.54929577464793"/>
+            <point key="canvasLocation" x="988" y="185"/>
         </scene>
         <!--minusMoneyController-->
         <scene sceneID="2Jg-hN-2rn">
@@ -347,8 +351,8 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите сумму" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="itU-3C-sQ3">
                                 <rect key="frame" x="87" y="212" width="146" height="30"/>
-                                <color key="tintColor" red="0.49803921569999998" green="0.64313725489999995" blue="0.070588235289999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.91852694749832153" green="0.30687138438224792" blue="0.20099249482154846" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.91764705882352937" green="0.30588235294117649" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.91764705882352937" green="0.30588235294117649" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                             </textField>
@@ -457,7 +461,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gB9-JR-KqO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2579.7101449275365" y="-672.554347826087"/>
+            <point key="canvasLocation" x="-384" y="-711"/>
         </scene>
         <!--Speech Recording View Controller-->
         <scene sceneID="HGE-lf-3VP">
@@ -499,20 +503,19 @@
                                     <action selector="speechRecordingFunction:" destination="RVA-tF-YBM" eventType="touchUpInside" id="DQr-3d-IMb"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A2V-A1-gNV">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Нажмите на микрофон и дождитесь зеленого цвета!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A2V-A1-gNV">
                                 <rect key="frame" x="16" y="268" width="283" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="NMj-ep-M14"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="0.0078431372549019607" green="0.64313725490196072" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KFl-D5-Gc2">
                                 <rect key="frame" x="20" y="59" width="280" height="190"/>
-                                <color key="backgroundColor" red="0.91852694749999997" green="0.3068713844" blue="0.2009924948" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhj-nK-PWj">
                                 <rect key="frame" x="52" y="20" width="175" height="32"/>
@@ -548,13 +551,14 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorView" destination="KFl-D5-Gc2" id="oMN-ZR-14g"/>
                         <outlet property="recognizedSpeech" destination="A2V-A1-gNV" id="21B-Bx-X0K"/>
                         <outlet property="speechRecordingButton" destination="hwH-Ko-FZT" id="hQz-MN-dwn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvY-0t-94M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2165.625" y="216.25"/>
+            <point key="canvasLocation" x="780" y="-711"/>
         </scene>
         <!--plusMoneyController-->
         <scene sceneID="jWs-Da-kBB">
@@ -590,9 +594,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8J8-z9-PjK">
-                                <rect key="frame" x="17" y="29" width="33" height="33"/>
+                                <rect key="frame" x="17" y="29" width="35" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="33" id="bvz-Bv-rDd"/>
+                                    <constraint firstAttribute="width" constant="35" id="bvz-Bv-rDd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Button" image="Закрыть Зеленый"/>
@@ -650,8 +654,14 @@
                                     <outlet property="delegate" destination="wjg-VH-jLg" id="a2a-fU-IGY"/>
                                 </connections>
                             </collectionView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Откуда у Вас деньги?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uo8-Nm-Gh4">
+                                <rect key="frame" x="40" y="158" width="240" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sod-5i-VIz">
-                                <rect key="frame" x="51" y="27" width="153" height="34"/>
+                                <rect key="frame" x="52" y="28" width="153" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="153" id="vO6-oR-13B"/>
                                 </constraints>
@@ -660,12 +670,6 @@
                                     <color key="titleColor" red="0.50462341310000003" green="0.72083967920000003" blue="0.048502199349999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Откуда у Вас деньги?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uo8-Nm-Gh4">
-                                <rect key="frame" x="40" y="158" width="240" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -673,10 +677,10 @@
                             <constraint firstItem="Jbx-Yb-Feo" firstAttribute="leading" secondItem="yNO-WF-i6S" secondAttribute="leading" constant="87" id="4ls-Qa-2Tu"/>
                             <constraint firstItem="X8N-g1-q7k" firstAttribute="leading" secondItem="yNO-WF-i6S" secondAttribute="leading" constant="16" id="5oa-GO-u0f"/>
                             <constraint firstItem="IPR-3F-ECN" firstAttribute="top" secondItem="X8N-g1-q7k" secondAttribute="bottom" constant="8" id="CM5-9u-RYC"/>
-                            <constraint firstItem="Sod-5i-VIz" firstAttribute="bottom" secondItem="8J8-z9-PjK" secondAttribute="bottom" constant="-1" id="FlC-44-zjb"/>
-                            <constraint firstItem="pHA-FD-WkG" firstAttribute="top" secondItem="Sod-5i-VIz" secondAttribute="bottom" constant="26" id="KvX-lX-T1F"/>
+                            <constraint firstItem="Sod-5i-VIz" firstAttribute="bottom" secondItem="8J8-z9-PjK" secondAttribute="bottom" constant="1" id="FlC-44-zjb"/>
+                            <constraint firstItem="pHA-FD-WkG" firstAttribute="top" secondItem="Sod-5i-VIz" secondAttribute="bottom" constant="22" id="KvX-lX-T1F"/>
                             <constraint firstAttribute="trailing" secondItem="X8N-g1-q7k" secondAttribute="trailing" constant="16" id="MYY-iT-8sM"/>
-                            <constraint firstItem="Sod-5i-VIz" firstAttribute="firstBaseline" secondItem="8J8-z9-PjK" secondAttribute="firstBaseline" constant="-1" id="RY9-uw-91j"/>
+                            <constraint firstItem="Sod-5i-VIz" firstAttribute="firstBaseline" secondItem="8J8-z9-PjK" secondAttribute="firstBaseline" id="RY9-uw-91j"/>
                             <constraint firstItem="pHA-FD-WkG" firstAttribute="leading" secondItem="yNO-WF-i6S" secondAttribute="leading" constant="16" id="TRt-kX-dL2"/>
                             <constraint firstItem="8J8-z9-PjK" firstAttribute="top" secondItem="Aab-wX-tMh" secondAttribute="bottom" constant="9" id="UAm-Z5-MLN"/>
                             <constraint firstItem="yD0-f2-PIx" firstAttribute="top" secondItem="Jbx-Yb-Feo" secondAttribute="bottom" constant="20" id="UBh-fP-c3h"/>
@@ -685,11 +689,11 @@
                             <constraint firstItem="X8N-g1-q7k" firstAttribute="top" secondItem="yD0-f2-PIx" secondAttribute="bottom" constant="17" id="f91-07-xSs"/>
                             <constraint firstItem="Uo8-Nm-Gh4" firstAttribute="top" secondItem="yNO-WF-i6S" secondAttribute="top" constant="158" id="ghb-Uj-Gjw"/>
                             <constraint firstAttribute="trailing" secondItem="Uo8-Nm-Gh4" secondAttribute="trailing" constant="40" id="igF-TR-PVZ"/>
-                            <constraint firstItem="Sod-5i-VIz" firstAttribute="leading" secondItem="8J8-z9-PjK" secondAttribute="trailing" constant="1" id="jUl-uV-no8"/>
+                            <constraint firstItem="Sod-5i-VIz" firstAttribute="leading" secondItem="8J8-z9-PjK" secondAttribute="trailing" id="jUl-uV-no8"/>
                             <constraint firstItem="Jbx-Yb-Feo" firstAttribute="top" secondItem="yNO-WF-i6S" secondAttribute="top" constant="212" id="kN6-Lv-Ir9"/>
                             <constraint firstAttribute="trailing" secondItem="pHA-FD-WkG" secondAttribute="trailing" constant="16" id="m3G-Gn-Gym"/>
                             <constraint firstItem="yD0-f2-PIx" firstAttribute="leading" secondItem="yNO-WF-i6S" secondAttribute="leading" constant="4" id="mGi-Nj-YGQ"/>
-                            <constraint firstItem="Sod-5i-VIz" firstAttribute="baseline" secondItem="8J8-z9-PjK" secondAttribute="baseline" constant="-1" id="pkm-bo-0ej"/>
+                            <constraint firstItem="Sod-5i-VIz" firstAttribute="baseline" secondItem="8J8-z9-PjK" secondAttribute="baseline" id="pkm-bo-0ej"/>
                             <constraint firstItem="8J8-z9-PjK" firstAttribute="leading" secondItem="yNO-WF-i6S" secondAttribute="leading" constant="17" id="sgW-5e-yo0"/>
                             <constraint firstAttribute="trailing" secondItem="yD0-f2-PIx" secondAttribute="trailing" constant="4" id="vud-br-RNi"/>
                         </constraints>
@@ -702,7 +706,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhh-50-f03" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663.7681159420292" y="-671.73913043478262"/>
+            <point key="canvasLocation" x="-1209" y="-710"/>
         </scene>
     </scenes>
     <resources>

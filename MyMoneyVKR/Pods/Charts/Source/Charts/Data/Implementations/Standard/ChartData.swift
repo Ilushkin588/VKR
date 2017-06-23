@@ -13,14 +13,14 @@ import Foundation
 
 open class ChartData: NSObject
 {
-    internal var _yMax: Double = -.greatestFiniteMagnitude
-    internal var _yMin: Double = .greatestFiniteMagnitude
-    internal var _xMax: Double = -.greatestFiniteMagnitude
-    internal var _xMin: Double = .greatestFiniteMagnitude
-    internal var _leftAxisMax: Double = -.greatestFiniteMagnitude
-    internal var _leftAxisMin: Double = .greatestFiniteMagnitude
-    internal var _rightAxisMax: Double = -.greatestFiniteMagnitude
-    internal var _rightAxisMin: Double = .greatestFiniteMagnitude
+    internal var _yMax: Double = -Double.greatestFiniteMagnitude
+    internal var _yMin: Double = Double.greatestFiniteMagnitude
+    internal var _xMax: Double = -Double.greatestFiniteMagnitude
+    internal var _xMin: Double = Double.greatestFiniteMagnitude
+    internal var _leftAxisMax: Double = -Double.greatestFiniteMagnitude
+    internal var _leftAxisMin: Double = Double.greatestFiniteMagnitude
+    internal var _rightAxisMax: Double = -Double.greatestFiniteMagnitude
+    internal var _rightAxisMin: Double = Double.greatestFiniteMagnitude
     
     internal var _dataSets = [IChartDataSet]()
     
@@ -71,20 +71,20 @@ open class ChartData: NSObject
     /// calc minimum and maximum y value over all datasets
     open func calcMinMax()
     {
-        _yMax = -.greatestFiniteMagnitude
-        _yMin = .greatestFiniteMagnitude
-        _xMax = -.greatestFiniteMagnitude
-        _xMin = .greatestFiniteMagnitude
+        _yMax = -Double.greatestFiniteMagnitude
+        _yMin = Double.greatestFiniteMagnitude
+        _xMax = -Double.greatestFiniteMagnitude
+        _xMin = Double.greatestFiniteMagnitude
         
         for set in _dataSets
         {
             calcMinMax(dataSet: set)
         }
         
-        _leftAxisMax = -.greatestFiniteMagnitude
-        _leftAxisMin = .greatestFiniteMagnitude
-        _rightAxisMax = -.greatestFiniteMagnitude
-        _rightAxisMin = .greatestFiniteMagnitude
+        _leftAxisMax = -Double.greatestFiniteMagnitude
+        _leftAxisMin = Double.greatestFiniteMagnitude
+        _rightAxisMax = -Double.greatestFiniteMagnitude
+        _rightAxisMin = Double.greatestFiniteMagnitude
         
         // left axis
         let firstLeft = getFirstLeft(dataSets: dataSets)
@@ -257,7 +257,7 @@ open class ChartData: NSObject
     {
         if axis == .left
         {
-            if _leftAxisMin == .greatestFiniteMagnitude
+            if _leftAxisMin == Double.greatestFiniteMagnitude
             {
                 return _rightAxisMin
             }
@@ -268,7 +268,7 @@ open class ChartData: NSObject
         }
         else
         {
-            if _rightAxisMin == .greatestFiniteMagnitude
+            if _rightAxisMin == Double.greatestFiniteMagnitude
             {
                 return _leftAxisMin
             }
@@ -295,7 +295,7 @@ open class ChartData: NSObject
     {
         if axis == .left
         {
-            if _leftAxisMax == -.greatestFiniteMagnitude
+            if _leftAxisMax == -Double.greatestFiniteMagnitude
             {
                 return _rightAxisMax
             }
@@ -306,7 +306,7 @@ open class ChartData: NSObject
         }
         else
         {
-            if _rightAxisMax == -.greatestFiniteMagnitude
+            if _rightAxisMax == -Double.greatestFiniteMagnitude
             {
                 return _leftAxisMax
             }
@@ -454,7 +454,7 @@ open class ChartData: NSObject
     /// Also recalculates all minimum and maximum values.
     ///
     /// - returns: `true` if a DataSet was removed, `false` ifno DataSet could be removed.
-    open func removeDataSet(_ dataSet: IChartDataSet!) -> Bool
+    @discardableResult open func removeDataSet(_ dataSet: IChartDataSet!) -> Bool
     {
         if dataSet === nil
         {
@@ -476,7 +476,7 @@ open class ChartData: NSObject
     /// Also recalculates all minimum and maximum values. 
     ///
     /// - returns: `true` if a DataSet was removed, `false` ifno DataSet could be removed.
-    open func removeDataSetByIndex(_ index: Int) -> Bool
+    @discardableResult open func removeDataSetByIndex(_ index: Int) -> Bool
     {
         if index >= _dataSets.count || index < 0
         {
@@ -508,7 +508,7 @@ open class ChartData: NSObject
     }
     
     /// Removes the given Entry object from the DataSet at the specified index.
-    open func removeEntry(_ entry: ChartDataEntry, dataSetIndex: Int) -> Bool
+    @discardableResult open func removeEntry(_ entry: ChartDataEntry, dataSetIndex: Int) -> Bool
     {
         // entry outofbounds
         if dataSetIndex >= _dataSets.count
@@ -530,7 +530,7 @@ open class ChartData: NSObject
     /// Removes the Entry object closest to the given xIndex from the ChartDataSet at the
     /// specified index. 
     /// - returns: `true` if an entry was removed, `false` ifno Entry was found that meets the specified requirements.
-    open func removeEntry(xValue: Double, dataSetIndex: Int) -> Bool
+    @discardableResult open func removeEntry(xValue: Double, dataSetIndex: Int) -> Bool
     {
         if dataSetIndex >= _dataSets.count
         {

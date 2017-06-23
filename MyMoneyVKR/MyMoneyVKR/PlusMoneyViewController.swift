@@ -10,13 +10,8 @@ import UIKit
 import RealmSwift
 import TextFieldEffects
 
-//protocol PlusBalanceDelegate {
-  //  func fillTheLabelWith(info: String)
-//}
 
 class PlusMoneyViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
-   // var delegate: PlusBalanceDelegate?
     
     let realmPlusMoney = try!Realm()
     var categoryPlusMoney = ""
@@ -29,8 +24,6 @@ class PlusMoneyViewController: UIViewController, UICollectionViewDelegate, UICol
         let plusMoneyCellReuseIdentifier = "cell"
     let itemsPlusMoney = ["Зарплата", "Бизнес", "Долги", "Подарок", "Проценты", "Сбережения"]
     let plusMoneyImageArray = [UIImage(named:"salary"), UIImage(named:"business"), UIImage(named:"debts"), UIImage(named:"present"), UIImage(named:"procents"), UIImage(named:"savings")]
-    
-   
     
     // Выбор типа дохода
     @IBAction func typeChooseSegmentControl(_ sender: Any) {
@@ -75,7 +68,9 @@ class PlusMoneyViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     //Добавление объекта(дохода)
+    
     @IBAction func addPlusMoneyButton(_ sender: Any) {
+       // for i in 0 ..< 366 {
         if (nameOfPlusMoney.text! != "" && amountOfPlusMoney.text! != "" && categoryPlusMoney != "" && typePlusMoney != "") {
             //let inform = amountOfPlusMoney.text
             //delegate?.fillTheLabelWith(info: inform!)
@@ -89,10 +84,10 @@ class PlusMoneyViewController: UIViewController, UICollectionViewDelegate, UICol
             newPlusMoney.name = nameOfPlusMoney.text!
             newPlusMoney.amount = Int(amountOfPlusMoney.text!)!
             newPlusMoney.category = categoryPlusMoney
-        
                 try! realmPlusMoney.write{
                     realmPlusMoney.add(newPlusMoney)
                             }
+            
             nameOfPlusMoney.text = ""
             amountOfPlusMoney.text = ""
         } else{
@@ -102,8 +97,15 @@ class PlusMoneyViewController: UIViewController, UICollectionViewDelegate, UICol
             
             self.present(alert, animated: true, completion: nil)
             
-        }
+            }
+//        let methodStart = Date()
+//        /* Нужный метод */
+//        let methodEnd = Date()
+//        let executionTime = methodEnd.timeIntervalSince(methodStart)
+//        print("Execution time: \(executionTime)ms")
     }
+   
+         
     var plusList : Results<PlusMoney>!
     func readPlusMoneyAndUpdateUI(){
         plusList = realmPlusMoney.objects(PlusMoney.self)
@@ -111,6 +113,7 @@ class PlusMoneyViewController: UIViewController, UICollectionViewDelegate, UICol
             plusBalance += plus.amount
         }
     }
+    
     /*
     // MARK: - Navigation
 
